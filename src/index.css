@@ -1,0 +1,72 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "./styles/tokens.css"; /* colours, fonts, radii */
+@import "./unmute.css"; /* background, headings, focus ring, floors */
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  /* Spec radii: tags 3px, buttons 4px, cards 6px, panels 8px, feature cards 10px */
+  --radius-sm: 3px;
+  --radius-md: 3px;
+  --radius-lg: var(--radius-btn);
+  --radius-xl: var(--radius-card);
+  --radius-2xl: var(--radius-panel);
+  --radius-3xl: var(--radius-feature);
+
+  /* shadcn names */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--secondary);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  /* unmute tokens as classes: bg-surface, text-signal, border-line-2, bg-line-e… */
+  --color-deep: var(--bg-deep);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-forest: var(--forest);
+  --color-forest-2: var(--forest-2);
+  --color-line: var(--line);
+  --color-line-2: var(--line-2);
+  --color-soft: var(--text-2);
+  --color-sage: var(--sage);
+  --color-sage-hover: var(--sage-hover);
+  --color-sage-ink: var(--sage-ink);
+  --color-teal: var(--teal);
+  --color-signal: var(--signal);
+  --color-signal-ink: var(--signal-ink);
+  --color-signal-soft: var(--signal-soft);
+  --color-signal-line: var(--signal-line);
+  --color-line-e: var(--line-e);
+  --color-line-e-ink: var(--line-e-ink);
+  --color-line-o: var(--line-o);
+  --color-line-o-ink: var(--line-o-ink);
+  --color-line-a: var(--line-a);
+  --color-line-a-ink: var(--line-a-ink);
+  --color-line-d: var(--line-d);
+  --color-line-d-ink: var(--line-d-ink);
+
+  /* Same stacks as tokens.css (written out: these names would point at themselves) */
+  --font-sans: "Geist", system-ui, sans-serif;
+  --font-mono: "Geist Mono", ui-monospace, monospace;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+}
